@@ -5,7 +5,7 @@ struct Player
 	Circle circle{ 400, 530, 28 };
 
 	Texture textureAlive{ U"👶"_emoji };
-	Texture textureDead{ U"💀"_emoji };
+	Texture textureDead{ U"😭"_emoji };
 
 	// プレイヤーの状態を更新する関数
 	void update(double deltaTime)
@@ -314,11 +314,10 @@ void Main()
 	System::SetTerminationTriggers(UserAction::CloseButtonClicked);
 
 	const Font font{ FontMethod::MSDF, 48, Typeface::Bold };
-	const Audio audio_playing{ Resource(U"audio/hellobaby.mp3") };
-	const Audio audio_go{ Resource(U"audio/Impact-38.mp3") };
-	const Audio audio_vic{ Resource(U"audio/victory.mp3") };
-	const Audio audio_vicH{ Resource(U"audio/victoryH.mp3") };
-	const Audio audio_oh{ Resource(U"audio/oh.wav") };
+	const Audio audio_playing{ Resource(U"audio/maou_game_town24.ogg") };
+	const Audio audio_go{ Resource(U"audio/maou_game_piano07.ogg") };
+	const Audio audio_vic{ Resource(U"audio/MusMus-JGL-012.mp3") };
+	const Audio audio_oh{ Resource(U"audio/musmus_cancel_set/cncl06.mp3") };
 	audio_go.setVolume(0.9);
 
 	// アイテムのテクスチャ配列
@@ -372,7 +371,7 @@ void Main()
 			audio_playing.stopAllShots();
 			audio_go.stopAllShots();
 			audio_vic.stopAllShots();
-			audio_vicH.stopAllShots();
+			audio_vic.stopAllShots();
 			audio_oh.stopAllShots();
 
 			difficulty.setValue(diffId);		
@@ -530,7 +529,7 @@ void Main()
 							audio_vic.playOneShot();
 						}
 						else {
-							audio_vicH.playOneShot();
+							audio_vic.playOneShot();
 						}
 					}
 				}
@@ -584,7 +583,7 @@ void Main()
 				{
 					sceneId = 1;
 					audio_vic.stopAllShots();
-					audio_vicH.stopAllShots();
+					audio_vic.stopAllShots();
 					difficulty.setValue(diffId);
 					items.clear();
 					player.setDefaultValue();
@@ -596,7 +595,7 @@ void Main()
 				{
 					sceneId = 0;
 					audio_vic.stopAllShots();
-					audio_vicH.stopAllShots();
+					audio_vic.stopAllShots();
 					difficulty.setValue(diffId);
 					items.clear();
 
