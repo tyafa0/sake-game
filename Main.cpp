@@ -258,19 +258,17 @@ void DrawVicUI(const int32 score, const int32 highscore, const bool refreshed, c
 		
 		if (diff == 0) {
 			// ハッシュタグや URL を含めると広まりやすいです。
-			String text = U"個人開発のクソゲーで {} 点取ったよ！\n#Test #Siv3D\nhttps://github.com/Siv3D/OpenSiv3D"_fmt(ThousandsSeparate(highscore));
+			String text = U"避けゲーで {} 点取ったよ！\n#Test #Siv3D\nhttps://github.com/Siv3D/OpenSiv3D"_fmt(ThousandsSeparate(highscore));
 			// ツイート投稿画面を開く
 			Twitter::OpenTweetWindow(text);
 		}
 		else if (diff == 1){
-			// ハッシュタグや URL を含めると広まりやすいです。
-			String text = U"個人開発のクソゲー(HARDモード)で {} 点取ったよ！\n#Test #Siv3D\nhttps://github.com/Siv3D/OpenSiv3D"_fmt(ThousandsSeparate(highscore));
+			String text = U"避けゲー(HARDモード)で {} 点取ったよ！\n#Test #Siv3D\nhttps://github.com/Siv3D/OpenSiv3D"_fmt(ThousandsSeparate(highscore));
 			// ツイート投稿画面を開く
 			Twitter::OpenTweetWindow(text);
 		}
 		else if (diff == 2){
-			// ハッシュタグや URL を含めると広まりやすいです。
-			String text = U"個人開発のクソゲー(VERY HARD)で {} 点取ったよ！\n#Test #Siv3D\nhttps://github.com/Siv3D/OpenSiv3D"_fmt(ThousandsSeparate(highscore));
+			String text = U"避けゲー(VERY HARD)で {} 点取ったよ！\n#Test #Siv3D\nhttps://github.com/Siv3D/OpenSiv3D"_fmt(ThousandsSeparate(highscore));
 			// ツイート投稿画面を開く
 			Twitter::OpenTweetWindow(text);
 		}
@@ -283,7 +281,7 @@ void DrawTitleUI(const Font& font)
 	font(U"避けゲー").drawAt(100, Vec2{ 400, 260 }, ColorF{ 0.2 });
 	font(U"赤ちゃんを外敵から守ろう！").drawAt(25, Vec2{ 400, 420 }, ColorF{ 0.3 });
 	font(U"Spaceを押してスタート").drawAt(15, Vec2{ 400, 570 }, ColorF{ 0.1 });
-	font(U"Ver.1.21").drawAt(15, Vec2{ 700, 520 }, ColorF{ 0.3 });
+	font(U"Ver.1.22").drawAt(15, Vec2{ 700, 520 }, ColorF{ 0.3 });
 	font(U"ハイスコア[Q]").draw(30, Vec2{ 10, 10 }, ColorF{ 0.1 });
 }
 
