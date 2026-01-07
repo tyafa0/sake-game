@@ -50,3 +50,4 @@
 
 ## 📜 ライセンス / クレジット
 * **Engine:** OpenSiv3D
+* **BGM,SFX**: 魔王魂, MusMus
